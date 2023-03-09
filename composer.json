@@ -1,0 +1,36 @@
+{
+    "name": "plejzner/commission-refactoring-task",
+    "description": "",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Plejzner\\CommissionTask\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Plejzner\\CommissionTask\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=8.2.1",
+        "ext-curl": "*",
+        "monolog/monolog": "^3.3",
+        "symfony/http-client": "^6.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
